@@ -9,7 +9,7 @@ import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 
 @SpringBootApplication
 public class PaySendApplication {
-
+/*
 	@Bean
 	public SimpleDriverDataSource dataSource() throws ClassNotFoundException {
 
@@ -22,7 +22,7 @@ public class PaySendApplication {
 		dataSource.setPassword("");
 
 		return dataSource;
-	}
+	}*/
 
 	public static void main(final String[] args) {
 		SpringApplication.run(PaySendApplication.class, args);

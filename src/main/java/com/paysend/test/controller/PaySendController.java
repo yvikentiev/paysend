@@ -25,7 +25,7 @@ public class PaySendController {
     )
     public ResponseEntity<Response> register(@RequestBody final Request request) {
 
-        System.out.printf("Request %s", request);
+        log.debug("Request %s", request);
 
         final User user = new User(new Long(-1),
                 request.getLogin().getText(),

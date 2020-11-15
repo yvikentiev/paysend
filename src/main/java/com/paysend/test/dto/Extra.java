@@ -1,19 +1,20 @@
 package com.paysend.test.dto;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@JacksonXmlRootElement(localName = "extra")
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlValue;
+
+@XmlRootElement(name = "extra")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class Extra {
-    @JacksonXmlProperty(localName="name",isAttribute = true)
+    @XmlAttribute(name="name")
     private String name;
-    @JacksonXmlText
+    @XmlValue
     private String text;
 }
